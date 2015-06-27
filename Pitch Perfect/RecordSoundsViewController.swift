@@ -23,9 +23,9 @@ class RecordSoundsViewController: UIViewController, AVAudioRecorderDelegate
     
     // MARK: Audio Recording Properties
     
-    var audioRecorder:AVAudioRecorder!
-    var recordedAudio:RecordedAudio!
-    var audioFilePathUrl:NSURL!
+    var audioRecorder: AVAudioRecorder!
+    var recordedAudio: RecordedAudio!
+    var audioFilePathUrl: NSURL!
     let defaultAudioFilename = "my_audio.wav"
     let playSoundsVCIdentifier = "stopRecording"
 
@@ -54,7 +54,7 @@ class RecordSoundsViewController: UIViewController, AVAudioRecorderDelegate
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         if (segue.identifier == playSoundsVCIdentifier) {
-            let playSoundsVC:PlaySoundsViewController = segue.destinationViewController as! PlaySoundsViewController
+            let playSoundsVC: PlaySoundsViewController = segue.destinationViewController as! PlaySoundsViewController
             let data = sender as! RecordedAudio
             playSoundsVC.receivedAudio = data
         }
@@ -78,7 +78,7 @@ class RecordSoundsViewController: UIViewController, AVAudioRecorderDelegate
     {
         if (flag) {
             recordedAudio = RecordedAudio(filePathUrl: recorder.url, title: recorder.url.lastPathComponent!)
-            self.performSegueWithIdentifier(playSoundsVCIdentifier, sender:recordedAudio)
+            self.performSegueWithIdentifier(playSoundsVCIdentifier, sender: recordedAudio)
             
         } else {
             println("Error while recording.")
@@ -98,37 +98,38 @@ class RecordSoundsViewController: UIViewController, AVAudioRecorderDelegate
     
     func setUIStateRecording()
     {
-        self.recordingProgressLabel.text = "recording"
-        self.stopButton.hidden = false
-        self.recordingButton.enabled = false
-        self.pauseButton.hidden = false
+        recordingProgressLabel.text = "recording"
+        stopButton.hidden = false
+        recordingButton.enabled = false
+        pauseButton.hidden = false
     }
     
     func setUIStateReady()
     {
-        self.recordingProgressLabel.text = "Tap to Record"
-        self.stopButton.hidden = true
-        self.recordingButton.enabled = true
-        self.pauseButton.hidden = true
+        recordingProgressLabel.text = "Tap to Record"
+        stopButton.hidden = true
+        recordingButton.enabled = true
+        pauseButton.hidden = true
         let image = UIImage(named: "pauseButton") as UIImage?
-        self.pauseButton.setImage(image, forState: .Normal)
+        pauseButton.setImage(image, forState: .Normal)
     }
     
     // MARK: - Pause Recording
-    @IBAction func pauseRecording(sender:UIButton)
+    
+    @IBAction func pauseRecording(sender: UIButton)
     {
         if (audioRecorder != nil) {
             if (audioRecorder.recording) {
                 audioRecorder.pause()
-                self.recordingProgressLabel.text = "paused"
+                recordingProgressLabel.text = "paused"
                 let image = UIImage(named: "recordButton") as UIImage?
-                self.pauseButton.setImage(image, forState: .Normal)
+                pauseButton.setImage(image, forState: .Normal)
                 
             } else {
                 audioRecorder.record()
-                self.recordingProgressLabel.text = "recording"
+                recordingProgressLabel.text = "recording"
                 let image = UIImage(named: "pauseButton") as UIImage?
-                self.pauseButton.setImage(image, forState: .Normal)
+                pauseButton.setImage(image, forState: .Normal)
             }
         }
     }

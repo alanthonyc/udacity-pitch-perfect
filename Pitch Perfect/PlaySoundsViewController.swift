@@ -13,15 +13,15 @@ class PlaySoundsViewController: UIViewController {
 
     // MARK: - Class Properties
     
-    var audioPlayer:AVAudioPlayer!
-    var receivedAudio:RecordedAudio!
+    var audioPlayer: AVAudioPlayer!
+    var receivedAudio: RecordedAudio!
     
-    var audioEngine:AVAudioEngine!
-    var audioFile:AVAudioFile!
-    let pitchValueChipmunk:Float = 1000
-    let pitchValueDarth:Float = -1000
+    var audioEngine: AVAudioEngine!
+    var audioFile: AVAudioFile!
+    let pitchValueChipmunk: Float = 1000
+    let pitchValueDarth: Float = -1000
     
-    var audioSession:AVAudioSession = AVAudioSession.sharedInstance()
+    var audioSession: AVAudioSession = AVAudioSession.sharedInstance()
     
     // MARK: - View Management
     
@@ -29,7 +29,7 @@ class PlaySoundsViewController: UIViewController {
     {
         super.viewDidLoad()
         
-        audioPlayer = AVAudioPlayer(contentsOfURL:receivedAudio.filePathUrl, error:nil)
+        audioPlayer = AVAudioPlayer(contentsOfURL: receivedAudio.filePathUrl, error: nil)
         audioPlayer.enableRate = true
         
         audioEngine = AVAudioEngine()
@@ -104,7 +104,7 @@ class PlaySoundsViewController: UIViewController {
     func playAudioWithReverb()
     {
         var changeReverbEffect = AVAudioUnitReverb()
-        changeReverbEffect.loadFactoryPreset(AVAudioUnitReverbPreset(rawValue:9)!)
+        changeReverbEffect.loadFactoryPreset(AVAudioUnitReverbPreset(rawValue: 9)!)
         changeReverbEffect.wetDryMix = 100
         playAudioWithEffect(changeReverbEffect)
     }
