@@ -41,22 +41,49 @@
                                     <action selector="stopRecording:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="yrS-5e-JVR"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fhQ-nb-lJX">
+                                <rect key="frame" x="274" y="399" width="52" height="52"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="52" id="MaC-qo-8dv"/>
+                                    <constraint firstAttribute="width" constant="52" id="PpP-K6-hap"/>
+                                </constraints>
+                                <state key="normal" image="pauseButton.png">
+                                    <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="pauseRecording:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="WEn-Sg-EhD"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="Q7W-yH-5CU" firstAttribute="top" secondItem="cNc-Fs-28I" secondAttribute="bottom" constant="16" id="1gN-Ot-LQb"/>
+                            <constraint firstAttribute="centerX" secondItem="fhQ-nb-lJX" secondAttribute="centerX" id="22X-xy-nsX"/>
+                            <constraint firstItem="fhQ-nb-lJX" firstAttribute="leading" secondItem="EsD-4e-OXb" secondAttribute="trailing" constant="40" id="54e-bQ-0yF"/>
+                            <constraint firstItem="fhQ-nb-lJX" firstAttribute="centerY" secondItem="EsD-4e-OXb" secondAttribute="centerY" id="G3W-v6-Ylr"/>
                             <constraint firstItem="2fi-mo-0CV" firstAttribute="top" secondItem="EsD-4e-OXb" secondAttribute="bottom" constant="48" id="Nez-Yq-7y0"/>
                             <constraint firstAttribute="centerY" secondItem="cNc-Fs-28I" secondAttribute="centerY" id="WkR-Jq-j4Q"/>
+                            <constraint firstItem="fhQ-nb-lJX" firstAttribute="top" secondItem="Q7W-yH-5CU" secondAttribute="bottom" constant="12" id="ZVj-Z4-SEz"/>
                             <constraint firstAttribute="centerX" secondItem="cNc-Fs-28I" secondAttribute="centerX" id="alO-jh-XXi"/>
+                            <constraint firstItem="EsD-4e-OXb" firstAttribute="top" secondItem="fhQ-nb-lJX" secondAttribute="bottom" constant="8" symbolic="YES" id="keX-eK-WcF"/>
                             <constraint firstItem="Q7W-yH-5CU" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" id="v13-hm-Tuk"/>
                             <constraint firstAttribute="trailingMargin" secondItem="Q7W-yH-5CU" secondAttribute="trailing" id="yMe-0f-4fS"/>
                             <constraint firstAttribute="centerX" secondItem="EsD-4e-OXb" secondAttribute="centerX" id="yZh-IB-dWE"/>
                         </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="54e-bQ-0yF"/>
+                                <exclude reference="G3W-v6-Ylr"/>
+                                <exclude reference="keX-eK-WcF"/>
+                            </mask>
+                        </variation>
                     </view>
                     <navigationItem key="navigationItem" title="Record" id="UWD-Lh-q1a"/>
                     <connections>
+                        <outlet property="pauseButton" destination="fhQ-nb-lJX" id="AIl-cU-UNZ"/>
                         <outlet property="recordingButton" destination="cNc-Fs-28I" id="kuk-fd-Tns"/>
-                        <outlet property="recordingInProgressLabel" destination="Q7W-yH-5CU" id="hUs-2k-2hi"/>
+                        <outlet property="recordingProgressLabel" destination="Q7W-yH-5CU" id="ZkQ-FN-hOq"/>
                         <outlet property="stopButton" destination="EsD-4e-OXb" id="qyb-Wo-XWH"/>
                         <segue destination="3Us-Wc-TEN" kind="show" identifier="stopRecording" id="JSv-6y-J1x"/>
                     </connections>
@@ -183,6 +210,7 @@
         <image name="darthvader.png" width="100" height="100"/>
         <image name="fast.png" width="100" height="100"/>
         <image name="microphone" width="100" height="100"/>
+        <image name="pauseButton.png" width="102" height="102"/>
         <image name="reverb.png" width="102" height="102"/>
         <image name="slow.png" width="100" height="100"/>
         <image name="stop.png" width="50" height="50"/>

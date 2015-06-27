@@ -23,6 +23,8 @@
 		6BBCC5841B3E3FED00903050 /* chipmunk@2x~iphone.png in Resources */ = {isa = PBXBuildFile; fileRef = 6BBCC5831B3E3FED00903050 /* chipmunk@2x~iphone.png */; };
 		6BBCC5861B3E488600903050 /* darthvader@2x~iphone.png in Resources */ = {isa = PBXBuildFile; fileRef = 6BBCC5851B3E488600903050 /* darthvader@2x~iphone.png */; };
 		6BBCC5881B3E50CC00903050 /* reverb@2x~iphone.png in Resources */ = {isa = PBXBuildFile; fileRef = 6BBCC5871B3E50CC00903050 /* reverb@2x~iphone.png */; };
+		6BBCC58B1B3E89C000903050 /* pauseButton@2x~iphone.png in Resources */ = {isa = PBXBuildFile; fileRef = 6BBCC5891B3E89C000903050 /* pauseButton@2x~iphone.png */; };
+		6BBCC58C1B3E89C000903050 /* recordButton@2x~iphone.png in Resources */ = {isa = PBXBuildFile; fileRef = 6BBCC58A1B3E89C000903050 /* recordButton@2x~iphone.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -56,6 +58,8 @@
 		6BBCC5831B3E3FED00903050 /* chipmunk@2x~iphone.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "chipmunk@2x~iphone.png"; sourceTree = "<group>"; };
 		6BBCC5851B3E488600903050 /* darthvader@2x~iphone.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "darthvader@2x~iphone.png"; sourceTree = "<group>"; };
 		6BBCC5871B3E50CC00903050 /* reverb@2x~iphone.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "reverb@2x~iphone.png"; sourceTree = "<group>"; };
+		6BBCC5891B3E89C000903050 /* pauseButton@2x~iphone.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "pauseButton@2x~iphone.png"; sourceTree = "<group>"; };
+		6BBCC58A1B3E89C000903050 /* recordButton@2x~iphone.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "recordButton@2x~iphone.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -108,6 +112,8 @@
 				6BBCC5831B3E3FED00903050 /* chipmunk@2x~iphone.png */,
 				6BBCC5851B3E488600903050 /* darthvader@2x~iphone.png */,
 				6BBCC5871B3E50CC00903050 /* reverb@2x~iphone.png */,
+				6BBCC5891B3E89C000903050 /* pauseButton@2x~iphone.png */,
+				6BBCC58A1B3E89C000903050 /* recordButton@2x~iphone.png */,
 				6B5228E11B17ABD100916AA6 /* Images.xcassets */,
 				6B5228E31B17ABD100916AA6 /* LaunchScreen.xib */,
 				6B3AA6941B3E204500730052 /* movie_quote.mp3 */,
@@ -231,8 +237,10 @@
 				6B3AA6931B3E1F2700730052 /* slow@2x~iphone.png in Resources */,
 				6B3AA6951B3E204500730052 /* movie_quote.mp3 in Resources */,
 				6B5228E21B17ABD100916AA6 /* Images.xcassets in Resources */,
+				6BBCC58B1B3E89C000903050 /* pauseButton@2x~iphone.png in Resources */,
 				6B3AA6971B3E317F00730052 /* fast@2x~iphone.png in Resources */,
 				6B3AA68F1B3DFBD000730052 /* stop@2x~iphone.png in Resources */,
+				6BBCC58C1B3E89C000903050 /* recordButton@2x~iphone.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
